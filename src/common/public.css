@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    font-size: 12px;
+    background: #ddd;
+}
+
+/* 自己引入字体图标 */
+
+/* @font-face{
+    font-family: 'f';
+    src: url(./fonts/fontawesome-webfont.ttf);
+}
+.rocket{
+    font-family: f;
+    font-size: 30px;
+}
+.rocket::before{
+    content: "\f135";
+} */
+
+/*  自己引入字体图标  */
