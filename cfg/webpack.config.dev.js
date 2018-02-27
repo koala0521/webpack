@@ -2,6 +2,7 @@
 
 const base = require('./webpack.config.base')
 const dfPath = require('./path')
+const webpack = require('webpack')
 // webpack配置合并工具
 const merge =require('webpack-merge')
 
@@ -50,6 +51,10 @@ let config = {
             },
         ]
     },
+    plugins:[        
+        // 模块热替换功能 ,热更新(HMR)不能和[chunkhash]同时使用。
+        new webpack.HotModuleReplacementPlugin()
+    ],
 
     devtool: 'cheap-module-eval-source-map',
 };
