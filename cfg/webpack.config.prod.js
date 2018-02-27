@@ -12,6 +12,8 @@ const extractTextWebpackPlugin = require('extract-text-webpack-plugin');
 
 const extractCSS = new extractTextWebpackPlugin('assets/css/[name]_[contenthash:6].css');
 
+// style!css?modules&localIdentName=[name]__[local]
+
 // weback合并配置
 let strategyMerge = merge.strategy({
     entry: 'replace',
@@ -139,9 +141,9 @@ entry: {
         // 设置 process.env 环境变量的快捷方式。
 		new webpack.EnvironmentPlugin({
 			NODE_ENV: 'production'
-        }),
+        })
         
-		new ClosureCompilerPlugin()
+		// ,new ClosureCompilerPlugin()
     ],
 
     devtool: 'source-map'
