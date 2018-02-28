@@ -50,7 +50,10 @@ module.exports = {
             Router: ['react-router-dom', 'BrowserRouter'],
             connect: ['react-redux', 'connect'],
             Provide: ['react-redux', 'Privide']
-        })
+        }),
+
+        // 模块热替换功能
+        new webpack.HotModuleReplacementPlugin()
     ],
 
     //模块解析配置 ：一般那情况下不需要配置
@@ -61,5 +64,14 @@ module.exports = {
             dfPath.root,
             dfPath.src
         ]
+    },
+
+    devServer:{
+        // 服务器打包后，输出的资源路劲
+        publicPath:'/',
+        open:true,
+        historyApiFallback:true,
+        inline:true,
+        hot:true
     }
 };

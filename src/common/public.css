@@ -1,7 +1,8 @@
 body{
     margin: 0;
     font-size: 12px;
-    background: #ddd;
+    background: #aaa;
+    color: rgb(47, 101, 218)
 }
 
 /* 自己引入字体图标 */
