@@ -43,12 +43,30 @@ entry: {
                     dfPath.node_modules
                 ]
             },
+            // {
+            //     test: /\.css$/,
+            //     use: extractCSS.extract({
+            //         use: ['css-loader']
+            //     })
+			// },
+
+			/* 开启模块化的配置 */ 
             {
                 test: /\.css$/,
                 use: extractCSS.extract({
-                    use: ['css-loader']
+                    use: [
+						'style-loader',
+						{
+							loader: 'css-loader',
+                            options:{
+								modules: true,
+								outputPath: 'assets/css/'
+                            }							
+						}
+					]
                 })
-            },
+			},			
+
 			{
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
