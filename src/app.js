@@ -10,6 +10,10 @@ import './common/public.css'
 import aCss from './css/a.css'
 import bCss from './css/b.css'
 
+console.log('====================================');
+console.log( aCss , bCss );
+console.log('====================================');
+
 // 引入图片
 import Gif from './common/img/2.gif'
 
