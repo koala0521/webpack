@@ -44,7 +44,9 @@ entry: {
                 exclude: [
                     dfPath.node_modules
                 ]
-            },
+			},
+			
+			/* 不开启css模块化 */ 
             // {
             //     test: /\.css$/,
             //     use: extractCSS.extract({
@@ -57,12 +59,10 @@ entry: {
                 test: /\.css$/,
                 use: extractCSS.extract({
                     use: [
-						'style-loader',
 						{
 							loader: 'css-loader',
                             options:{
-								modules: true,
-								outputPath: 'assets/css/'
+								modules: true
                             }							
 						}
 					]

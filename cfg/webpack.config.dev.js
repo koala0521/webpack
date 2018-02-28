@@ -1,6 +1,7 @@
 // 开发环境打包配置
 
 const path = require('path');
+const webpack = require('webpack');
 const base = require('./webpack.config.base')
 const dfPath = require('./path')
 // webpack配置合并工具
@@ -84,7 +85,10 @@ let config = {
             },
         ]
     },
-
+    plugins:[
+        // 模块热替换功能
+        new webpack.HotModuleReplacementPlugin()
+    ],
     devtool: 'cheap-module-eval-source-map',
 
     devServer:{
