@@ -2,7 +2,8 @@ body{
     margin: 0;
     font-size: 12px;
     background: #aaa;
-    color: rgb(47, 101, 218)
+    color: rgb(211, 30, 166);
+    padding: 20px;
 }
 
 /* 自己引入字体图标 */

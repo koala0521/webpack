@@ -44,13 +44,31 @@ entry: {
                 exclude: [
                     dfPath.node_modules
                 ]
-            },
+			},
+			
+			/* 不开启css模块化 */ 
+            // {
+            //     test: /\.css$/,
+            //     use: extractCSS.extract({
+            //         use: ['css-loader']
+            //     })
+			// },
+
+			/* 开启模块化的配置 */ 
             {
                 test: /\.css$/,
                 use: extractCSS.extract({
-                    use: ['css-loader']
+                    use: [
+						{
+							loader: 'css-loader',
+                            options:{
+								modules: true
+                            }							
+						}
+					]
                 })
-            },
+			},			
+
 			{
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
