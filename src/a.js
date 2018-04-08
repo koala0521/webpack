@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// less文件
+import './less/test.less';
+
 export default class Header extends Component {
     
     constructor(){
@@ -9,7 +12,7 @@ export default class Header extends Component {
         
         console.log(this.props);   
         
-        return <h3>Header</h3>
+        return <h3 className="header" >Header</h3>
     }
 
 };
