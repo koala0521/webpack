@@ -67,7 +67,16 @@ entry: {
 						}
 					]
                 })
-			},			
+			},		
+			//处理less文件
+			{
+				test:/\.less$/,
+				use:[
+					'style-loader',
+					'css-loader',
+					'less-loader' 
+				]
+			},  	
 
 			{
                 test: /\.(png|jpg|jpeg|gif)$/,

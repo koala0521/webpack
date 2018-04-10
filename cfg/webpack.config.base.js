@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const Html = require('html-webpack-plugin');
 const CleanFolder = require('clean-webpack-plugin');
+// var htmlImg = require('html-withimg-loader!./public/index.html');
 
 const dfPath = require('./path');
 
@@ -35,7 +36,8 @@ module.exports = {
     plugins:[
         new Html({
             name:'index.html',
-            template:'./cfg/public/index.html'
+            // template:'./cfg/public/index.html'
+            template:'html-withimg-loader!'+ path.resolve( dfPath.root , './cfg/public/index.html' )
         }),
         new CleanFolder(['dist'],{
             root:dfPath.root

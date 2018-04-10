@@ -66,8 +66,7 @@ let config = {
                     'css-loader',
                     'less-loader' 
                 ]
-            },  
-            
+            },              
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: ['url-loader?limit=8192'],
